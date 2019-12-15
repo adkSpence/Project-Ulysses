@@ -1,4 +1,68 @@
+* {
+    -fx-primary : #2A2E37;
+    -fx-secondary : #FFFF8D;
+    -fx-primarytext : #B2B2B2;
+    -fx-blue: #1976D2;
+    -fx-red: #FF0000;
+    -fx-color-1:#1976D2;
+}
+
 .bg {
     -fx-background-image: url("../images/bg.jpeg");
     -fx-background-size: cover;
+}
+
+.tab{
+    -fx-background-color: -fx-primary;
+}
+
+.tab-header-background{
+    -fx-background-color: -fx-primary;
+}
+
+.tab-label{
+    -fx-text-fill: -fx-secondary;
+    -fx-font-size: 16pt;
+}
+
+
+.tab-main{
+    -fx-pref-height : 60;
+    -fx-max-height : 60;
+}
+
+.entry-button{
+    -fx-text-fill: #FFF;
+    -fx-background-color: -fx-primary;
+    -fx-border-color: -fx-secondary;
+    -fx-font-size: 12pt;
+    -fx-cursor: hand;
+}
+
+.dashboard-button{
+    -fx-text-fill: #000;
+    -fx-background-color: #FFF;
+    -fx-border-color: #000;
+    -fx-cursor: hand;
+}
+
+.entry-button:hover{
+    -fx-border-color: #d4ef04;
+    -fx-background-color: -fx-primary;
+    -fx-text-fill: -fx-secondary;
+}
+
+.entry-button:hover .glyph-icon {
+    -fx-fill: -fx-secondary;
+}
+
+.dashboard-button:hover {
+    -fx-background-color: #42a5f5;
+}
+
+.btn-get-started{
+    -fx-background-radius: 50px;
+    -fx-border-radius: 50px;
+    -fx-background-color: #42a5f5;
+    -fx-border-color: orange;
 }

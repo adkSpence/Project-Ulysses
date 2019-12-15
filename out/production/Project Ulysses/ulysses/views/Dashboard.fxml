@@ -6,34 +6,34 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.FlowPane?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="748.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="748.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ulysses.controllers.DashboardController">
    <center>
       <FlowPane alignment="CENTER" hgap="30.0" prefHeight="748.0" prefWidth="1029.0" vgap="30.0" BorderPane.alignment="CENTER">
          <children>
-            <JFXButton contentDisplay="TOP" prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: #fff; -fx-border-color: #000;" text="Add New">
+            <JFXButton fx:id="btn_asset" buttonType="RAISED" contentDisplay="TOP" onAction="#displayEntriesView" prefHeight="200.0" prefWidth="300.0" styleClass="dashboard-button" stylesheets="@css/Styles.css" text="ASSET DETAILS">
                <graphic>
                   <MaterialDesignIconView glyphName="NOTE_PLUS_OUTLINE" size="30" />
                </graphic>
             </JFXButton>
-            <JFXButton contentDisplay="TOP" prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: #fff; -fx-border-color: #000;" text="Track Assets in Use">
+            <JFXButton fx:id="btn_asset_track" buttonType="RAISED" contentDisplay="TOP" prefHeight="200.0" prefWidth="300.0" styleClass="dashboard-button" stylesheets="@css/Styles.css" text="TRACK ASSETS IN USE">
                <graphic>
                   <FontAwesomeIconView glyphName="BAN" size="30" />
                </graphic></JFXButton>
-            <JFXButton contentDisplay="TOP" prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: #fff; -fx-border-color: #000;" text="Available Assets">
+            <JFXButton buttonType="RAISED" contentDisplay="TOP" prefHeight="200.0" prefWidth="300.0" styleClass="dashboard-button" stylesheets="@css/Styles.css" text="AVAILABLE ASSETS">
                <graphic>
                   <FontAwesomeIconView glyphName="BUILDING_ALT" size="30" />
                </graphic></JFXButton>
-            <JFXButton contentDisplay="TOP" prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: #fff; -fx-border-color: #000;" text="Project Charts">
+            <JFXButton buttonType="RAISED" contentDisplay="TOP" prefHeight="200.0" prefWidth="300.0" styleClass="dashboard-button" stylesheets="@css/Styles.css" text="PROJECT CHARTS">
                <graphic>
                   <FontAwesomeIconView glyphName="LINE_CHART" size="30" />
                </graphic>
             </JFXButton>
-            <JFXButton contentDisplay="TOP" prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: #fff; -fx-border-color: #000;" text="Settings">
+            <JFXButton buttonType="RAISED" contentDisplay="TOP" prefHeight="200.0" prefWidth="300.0" styleClass="dashboard-button" stylesheets="@css/Styles.css" text="SETTINGS">
                <graphic>
                   <MaterialDesignIconView glyphName="SETTINGS" size="30" />
                </graphic>
             </JFXButton>
-            <JFXButton contentDisplay="TOP" prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: #fff; -fx-border-color: #000;" text="Suggest a Feature">
+            <JFXButton buttonType="RAISED" contentDisplay="TOP" prefHeight="200.0" prefWidth="300.0" styleClass="dashboard-button" stylesheets="@css/Styles.css" text="Suggest a Feature">
                <graphic>
                   <FontAwesomeIconView glyphName="COMMENTING_ALT" size="30" />
                </graphic>

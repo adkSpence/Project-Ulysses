@@ -6,7 +6,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import ulysses.Main;
-
+import ulysses.models.SQLStatements;
 import java.io.IOException;
 
 public class LoginController {
@@ -21,14 +21,14 @@ public class LoginController {
     private PasswordField txt_password;
 
     Main main = new Main();
+    SQLStatements sqlStatements = new SQLStatements();
 
     @FXML
     private void validateLogin() throws IOException {
-        if(txt_username.getText().equals("Spencer") && txt_password.getText().equals("1234")) {
+        if(sqlStatements.loginDetails(txt_username.getText(), txt_password.getText())) {
             main.displayDashboard();
             Stage window = (Stage) main_window.getScene().getWindow();
             window.close();
         }
     }
-
 }
