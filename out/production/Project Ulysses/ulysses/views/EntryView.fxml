@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.text.Font?>
+
+<JFXTabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="748.0" prefWidth="1050.0" stylesheets="@css/Styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ulysses.controllers.EntryController">
+   <tabs>
+      <Tab text="New Entry">
+         <content>
+            <BorderPane>
+               <center>
+                  <BorderPane>
+                     <center>
+                        <TilePane hgap="50.0" vgap="50.0">
+                           <children>
+                              <JFXComboBox fx:id="cb_workstation" focusColor="#4059a9" labelFloat="true" prefHeight="31.0" prefWidth="280.0" promptText="Workstation Type" />
+                              <JFXTextField fx:id="txt_model" labelFloat="true" promptText="Model Description" unFocusColor="BLACK">
+                                 <font>
+                                    <Font name="Lucida Sans Regular" size="16.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="txt_serialnumber" labelFloat="true" promptText="Serial Number">
+                                 <font>
+                                    <Font name="Lucida Sans Regular" size="16.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="txt_location" labelFloat="true" promptText="Location (Rm. Number)">
+                                 <font>
+                                    <Font name="Lucida Sans Regular" size="16.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXDatePicker fx:id="dtp_acquisition" defaultColor="#4059a9" nodeOrientation="LEFT_TO_RIGHT" prefHeight="31.0" prefWidth="278.0" promptText="Acquisition Date" />
+                              <JFXTextField fx:id="txt_user" labelFloat="true" promptText="End User">
+                                 <font>
+                                    <Font name="Lucida Sans Regular" size="16.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextArea fx:id="ta_comments" labelFloat="true" prefHeight="106.0" prefWidth="287.0" promptText="Extra Comments...">
+                                 <font>
+                                    <Font name="Lucida Sans Regular" size="16.0" />
+                                 </font>
+                              </JFXTextArea>
+                           </children>
+                           <padding>
+                              <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                           </padding>
+                        </TilePane>
+                     </center>
+                  </BorderPane>
+               </center>
+               <bottom>
+                  <HBox alignment="BOTTOM_CENTER" prefHeight="126.0" prefWidth="1050.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <JFXButton fx:id="btn_save" contentDisplay="TOP" onAction="#saveEntry" prefHeight="50.0" prefWidth="200.0" styleClass="entry-button" text="SAVE" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <FontAwesomeIconView fill="#fffefe" glyphName="SAVE" size="24" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_clear" contentDisplay="TOP" onAction="#clearEntry" prefHeight="50.0" prefWidth="200.0" styleClass="entry-button" text="CLEAR" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <FontAwesomeIconView fill="#fffcfc" glyphName="TIMES_CIRCLE" size="24" />
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </bottom>
+            </BorderPane>
+         </content>
+      </Tab>
+      <Tab text="Modify Existing">
+         <GridPane>
+            <columnConstraints>
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+         </GridPane>
+      </Tab>
+   </tabs>
+</JFXTabPane>
