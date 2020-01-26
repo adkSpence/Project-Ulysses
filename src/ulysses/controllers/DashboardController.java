@@ -20,6 +20,7 @@ public class DashboardController {
         Stage entry_stage = (Stage) btn_asset.getScene().getWindow();
         Scene entry_scene = new Scene(loader.getRoot());
         entry_stage.setScene(entry_scene);
+        entry_stage.setTitle("UNFPA Asset Tracker");
     }
 
 }

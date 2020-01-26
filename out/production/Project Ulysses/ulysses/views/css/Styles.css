@@ -14,6 +14,8 @@
 
 .tab{
     -fx-background-color: -fx-primary;
+    -fx-pref-width: 520;
+    -fx-max-width: 520;
 }
 
 .tab-header-background{
@@ -58,4 +60,11 @@
 
 .dashboard-button:hover {
     -fx-background-color: #42a5f5;
+}
+
+.btn-get-started{
+    -fx-background-radius: 50px;
+    -fx-border-radius: 50px;
+    -fx-background-color: #42a5f5;
+    -fx-border-color: orange;
 }

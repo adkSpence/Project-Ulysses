@@ -7,12 +7,16 @@ import java.sql.SQLException;
 
 public class SQLStatements {
 
-    public static Connection connection;
+    private Connection connection;
     public static String question, answer;
 
     public SQLStatements(){
         connection = SQLConnection.connectDb();
         if(connection == null) System.exit(1);
+    }
+
+    public Connection getConnection() {
+        return connection;
     }
 
     // Querying database to find main login to system
@@ -34,6 +38,7 @@ public class SQLStatements {
 
         finally{
             try {
+                assert preparedStatement != null;
                 preparedStatement.close();
                 resultSet.close();
             } catch (SQLException e) {
@@ -42,7 +47,10 @@ public class SQLStatements {
         }
     }
 
-    public static boolean verifyUser(String user){
+    /*
+    Verifying username for change in password
+     */
+    public boolean verifyUser(String user){
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
         String query = "SELECT * FROM credentials WHERE username = ?";

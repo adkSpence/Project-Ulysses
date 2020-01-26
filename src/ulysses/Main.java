@@ -23,6 +23,7 @@ public class Main extends Application {
         main_stage.setWidth(1050);
         main_stage.setHeight(750);
         main_stage.setResizable(false);
+        main_stage.setTitle("UNFPA Asset Tracker");
     }
 
     /*
@@ -45,6 +46,7 @@ public class Main extends Application {
         Stage dashboard_stage = new Stage();
         dashboard_stage.setScene(dashboard_scene);
         dashboard_stage.setResizable(false);
+        dashboard_stage.setTitle("UNFPA Asset Tracker");
         dashboard_stage.show();
     }
 }
