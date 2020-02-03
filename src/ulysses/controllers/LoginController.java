@@ -31,4 +31,11 @@ public class LoginController {
             window.close();
         }
     }
+
+    @FXML
+    private void displaySignUp() throws IOException {
+        main.displaySignUpScreen();
+        Stage window = (Stage) main_window.getScene().getWindow();
+        window.close();
+    }
 }

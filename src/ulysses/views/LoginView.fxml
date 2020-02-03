@@ -3,6 +3,7 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.SplitPane?>
@@ -11,6 +12,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
@@ -57,6 +59,15 @@
                               <FontAwesomeIconView glyphName="SIGN_IN" size="24" />
                            </graphic>
                         </JFXButton>
+                        <HBox alignment="BOTTOM_RIGHT" prefHeight="84.0" prefWidth="520.0" spacing="30.0">
+                           <children>
+                              <Label text="Already have an account?" />
+                              <JFXButton fx:id="btn_signup" onAction="#displaySignUp" prefHeight="37.0" prefWidth="122.0" styleClass="dashboard-button" stylesheets="@css/Styles.css" text="Sign Up" />
+                           </children>
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                        </HBox>
                      </children>
                   </VBox>
                </center>

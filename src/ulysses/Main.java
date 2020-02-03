@@ -38,6 +38,16 @@ public class Main extends Application {
         main_stage.show();
     }
 
+    public void displaySignUpScreen() throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(Main.class.getResource("views/SignUpView.fxml"));
+        BorderPane signup_layout = loader.load();
+        Scene signup_scene = new Scene(signup_layout);
+        Stage signup_stage = new Stage();
+        signup_stage.setScene(signup_scene);
+        signup_stage.show();
+    }
+
     public void displayDashboard() throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("views/Dashboard.fxml"));
